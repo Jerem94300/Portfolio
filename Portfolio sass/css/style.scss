@@ -1,0 +1,614 @@
+@import url(reset.css);
+@font-face {
+  font-family: 'poppinsregular';
+  src: url(../fonts/poppins-regular-webfont.woff2) format('woff2'),
+       url(../fonts/poppins-regular-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+$max-content-width: 80%;
+$max-logo-width: 100px;
+$max-icone-width: 6rem;
+
+$bg-color: #000000e7;
+$main-color: lightblue;
+$white-color: #fff;
+$text-primary-color: #000000;
+$background-nav: #ddd;
+$secondary-color: #73f6a7;
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.75rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+$font-size-xs: 0.25rem;
+$font-size-sm: 1rem;
+$font-size-md: 2rem;
+$font-size-lg: 1.5rem;
+$font-size-xl: 4rem;
+
+
+%link{
+    text-decoration:underline;
+    color: $white-color;
+    font-weight: bolder;
+    border-radius: 0.5rem;
+   
+  }
+
+  %img{
+    width: 15%;
+    height: auto;
+    opacity: 50%;
+    border-radius: 100%;
+  
+  }
+
+  %animation{
+
+    -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  }
+
+
+  %nav__btn{
+
+  border-radius: 100%;
+  background-color: $secondary-color;
+  color:$bg-color;
+
+  }
+
+
+
+
+
+@mixin display(
+  $display,
+  $column,
+  $direction,
+  $justifyContent,
+  $alignItems,
+  $gap
+) {
+  @if ($display == grid) {
+    display: $display;
+    grid-template-columns: $column;
+  } @else if($display == flex) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+  }
+
+  @if ($gap) {
+    gap: $gap;
+  }
+}
+
+
+
+
+// .img__body{
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     z-index: -1;
+// }
+
+body{
+    background-color: $bg-color;
+    margin: 50px 250px;
+}
+
+
+
+.header{
+    font-size: $font-size-md;
+    color: $white-color;
+    @include display(flex, false, row, space-between, center, false);
+    @extend%animation;
+
+
+}
+
+.btn__actif{
+  border-radius: 0.5rem;
+  height: 2rem;
+  color: $secondary-color;
+  opacity: 90%;
+  
+}
+
+
+
+
+.title__h1{
+    -webkit-animation: flicker-in-1 2s linear both;
+    animation: flicker-in-1 2s linear both;
+  
+  
+
+
+}
+
+
+
+.nav__list{
+
+    @extend%link;
+    @include display(flex, false, row, space-around, center, 2rem);
+
+
+}
+
+.nav__link{
+    @extend%link;
+    
+
+
+
+
+
+    :hover{
+        color: $secondary-color;
+        
+    }
+
+    
+    &:hover{
+        .icon__fb{
+            color: rgb(64, 64, 216)
+        }
+
+        .icon__insta{
+            color: rgb(197, 48, 118)
+        }
+
+        .icon__linkedin{
+            color: rgb(64, 64, 216)
+
+        }
+        
+
+    }
+
+}
+
+
+.main{
+ 
+      @include display(flex, false, false, space-between, center, false);
+
+
+
+}
+
+.landing__page{
+  height: 800px;
+}
+
+.presentation__main{
+  @include display(flex, column, column, center, baseline, false);
+
+
+}
+
+
+
+.name__main{
+    font-size: $font-size-xl;
+    color: $secondary-color;
+}
+
+
+
+.photo__accueil{
+    @include display(flex, false, false, center, center, false);
+    opacity: 50%;
+
+
+}
+
+
+
+
+.photo__item{
+    @extend%img;
+    width: 70%;
+   
+    
+        -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+
+}
+
+.title__main{
+  font-size: $font-size-sm;
+  color: $white-color;
+  @extend%animation
+
+}
+
+
+.paragraph__main{
+    font-size: $font-size-md;
+    color: $white-color;
+    @extend%animation
+
+}
+
+.title__h2{
+    font-size: $font-size-xl;
+    color: $white-color;
+    -webkit-animation: flicker-in-1 2s linear both;
+    animation: flicker-in-1 2s linear both;
+
+
+}
+
+
+.footer{
+    font-size: $font-size-md;
+    color: $white-color;
+    @include display(flex, false, false, space-between, center, false);
+    @extend%animation;
+
+  
+
+    .footer__nav__list{
+        @include display(flex, false, false, space-between, center, 2rem);
+
+        
+    }
+
+    .btn__footer{
+      border-radius: 2rem;
+      padding: 1rem;
+      font-size: $font-size-md;
+      font-weight: bolder;
+      background-color: $secondary-color;
+      
+      &:hover{
+        opacity: 50%;
+        background-color:$bg-color;
+        color: $white-color;
+        border: none;
+      }
+
+
+    }
+    
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 1100px){
+
+  body{
+    margin: 0;
+  }
+
+  .header{
+    @include display(flex, column, column, space-evenly, center, 4rem);
+
+
+
+  }
+
+
+    .title__h1{
+      margin-top: 2rem;
+        text-align: center;
+    }
+
+.landing__page{
+  @include display(flex, column, column, space-evenly, center, 4rem);
+
+  .presentation__main{
+    order: 2;
+    padding-bottom: 2rem;
+  }
+
+
+}
+
+
+
+
+.photo__item{
+    width: 50%;
+}
+
+
+.footer{
+    @include display(flex, column, column, space-evenly, center, 2rem);
+
+    .footer__nav__list{
+        @include display(flex, false, row, space-evenly, center, 2rem);
+
+    }
+    
+
+}
+
+.footer__presentation{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+}
+
+
+  /* ----------------------------------------------
+ * Generated by Animista on 2024-10-16 12:20:17
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * @animation flicker-in-1
+ * ----------------------------------------
+ */
+ @-webkit-keyframes flicker-in-1 {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    10.1% {
+      opacity: 1;
+    }
+    10.2% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    20.1% {
+      opacity: 1;
+    }
+    20.6% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    30.1% {
+      opacity: 1;
+    }
+    30.5% {
+      opacity: 1;
+    }
+    30.6% {
+      opacity: 0;
+    }
+    45% {
+      opacity: 0;
+    }
+    45.1% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 1;
+    }
+    55.1% {
+      opacity: 0;
+    }
+    57% {
+      opacity: 0;
+    }
+    57.1% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    60.1% {
+      opacity: 0;
+    }
+    65% {
+      opacity: 0;
+    }
+    65.1% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    75.1% {
+      opacity: 0;
+    }
+    77% {
+      opacity: 0;
+    }
+    77.1% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    85.1% {
+      opacity: 0;
+    }
+    86% {
+      opacity: 0;
+    }
+    86.1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes flicker-in-1 {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    10.1% {
+      opacity: 1;
+    }
+    10.2% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    20.1% {
+      opacity: 1;
+    }
+    20.6% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    30.1% {
+      opacity: 1;
+    }
+    30.5% {
+      opacity: 1;
+    }
+    30.6% {
+      opacity: 0;
+    }
+    45% {
+      opacity: 0;
+    }
+    45.1% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 1;
+    }
+    55.1% {
+      opacity: 0;
+    }
+    57% {
+      opacity: 0;
+    }
+    57.1% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    60.1% {
+      opacity: 0;
+    }
+    65% {
+      opacity: 0;
+    }
+    65.1% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    75.1% {
+      opacity: 0;
+    }
+    77% {
+      opacity: 0;
+    }
+    77.1% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    85.1% {
+      opacity: 0;
+    }
+    86% {
+      opacity: 0;
+    }
+    86.1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-10-16 11:39:51
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation puff-in-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+
+
+
+
