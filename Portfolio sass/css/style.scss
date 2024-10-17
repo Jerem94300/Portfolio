@@ -25,6 +25,8 @@ $spacing-md: 1rem;
 $spacing-lg: 1.5rem;
 $spacing-xl: 2rem;
 
+$font-family-primary:"poppinsregular";
+
 $font-size-xs: 0.25rem;
 $font-size-sm: 1rem;
 $font-size-md: 2rem;
@@ -113,6 +115,8 @@ body{
     @include display(flex, false, row, space-between, center, false);
     @extend%animation;
 
+  
+
 
 }
 
@@ -130,6 +134,7 @@ body{
 .title__h1{
     -webkit-animation: flicker-in-1 2s linear both;
     animation: flicker-in-1 2s linear both;
+    font-family: $font-family-primary
   
   
 
@@ -183,6 +188,8 @@ body{
 .main{
  
       @include display(flex, false, false, space-between, center, false);
+      font-family: $font-family-primary;
+    
 
 
 
@@ -273,6 +280,7 @@ body{
       font-size: $font-size-md;
       font-weight: bolder;
       background-color: $secondary-color;
+      font-family: $font-family-primary;
       
       &:hover{
         opacity: 50%;
