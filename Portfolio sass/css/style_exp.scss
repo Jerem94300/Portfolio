@@ -45,9 +45,8 @@ $font-size-xl: 4rem;
   }
 
   %img{
-    width: 30%;
+    width: 40%;
     height: auto;
-    border-radius: 2rem;
   
   }
 
@@ -197,12 +196,13 @@ body{
 
 .main{
     height: 800px;
-    @include display(flex, false, row, space-around, center, 2rem);
+    // @include display(flex, false, row, space-around, center, 2rem);
 
 }
 
 .picture__card{
-    @extend%img;
+    width: 50%;
+    border-radius: 2rem;
     @extend%callAnimationpuff;
 
     
@@ -220,6 +220,10 @@ body{
     
 }
 
+.skill__item{
+
+    @extend%img;
+}
 
 
 

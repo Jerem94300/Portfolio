@@ -12,10 +12,9 @@
   border-radius: 0.5rem;
 }
 
-.picture__card {
-  width: 30%;
+.skill__item {
+  width: 40%;
   height: auto;
-  border-radius: 2rem;
 }
 
 .header {
@@ -75,11 +74,11 @@ body {
 
 .main {
   height: 800px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 2rem;
+}
+
+.picture__card {
+  width: 50%;
+  border-radius: 2rem;
 }
 
 .paragraph__perso {
