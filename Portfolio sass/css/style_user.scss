@@ -43,10 +43,9 @@ $font-size-xl: 4rem;
   }
 
   %img{
-    width: 15%;
+    width: 50%;
     height: auto;
-    opacity: 50%;
-    border-radius: 100%;
+    border-radius: 2rem;
   
   }
 
@@ -112,6 +111,7 @@ $font-size-xl: 4rem;
 body{
     background-color: $bg-color;
     margin: 50px 250px;
+    
 }
 
 
@@ -190,6 +190,17 @@ body{
 
 }
 
+// main
+
+.picture__card{
+    @extend%img
+}
+
+.paragraph__perso{
+    font-size: $font-size-md;
+    color: $white-color;
+    text-align: center;
+}
 
 
 
@@ -204,15 +215,17 @@ body{
 
 
 .footer{
+    @include display(flex, false, row, space-between, center, 2rem);
     font-size: $font-size-md;
     color: $white-color;
-    @include display(flex, false, false, space-between, center, false);
+    display: flex;
+    width: 100%;
     @extend%callAnimationpuff;
 
   
 
     .footer__nav__list{
-        @include display(flex, false, false, space-between, center, 2rem);
+        @include display(flex, false, row, space-between, center, 2rem);
 
         
     }
@@ -251,9 +264,26 @@ body{
     margin: 0;
   }
 
- 
+
+.header{
+    @include display(flex, false, column, space-between, center, false);
+    @extend%animation;
+    margin-top: 2rem;
+
+
+    .nav{
+        margin-top: 2rem;
+    }
+
 
 }
+
+.container{
+    margin-top: 2rem;
+}
+
+ 
+
 
 
 
@@ -275,6 +305,14 @@ body{
 .footer__presentation{
     text-align: center;
 }
+
+
+.btn__footer{
+    margin-top: 2rem;
+}
+
+}
+
 
 
 
