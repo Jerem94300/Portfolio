@@ -18,6 +18,8 @@ $white-color: #fff;
 $text-primary-color: #000000;
 $background-nav: #ddd;
 $secondary-color: #73f6a7;
+$secondary-color-btn: #7fbe97;
+
 
 $spacing-xs: 0.5rem;
 $spacing-sm: 0.75rem;
@@ -112,6 +114,7 @@ $font-size-xl: 4rem;
 body{
     background-color: $bg-color;
     margin: 50px 250px;
+    font-family: $font-family-primary;
     
 }
 
@@ -133,6 +136,7 @@ body{
   height: 2rem;
   color: $secondary-color;
   opacity: 90%;
+
   
 }
 
@@ -142,7 +146,6 @@ body{
 .title__h1{
     -webkit-animation: flicker-in-1 2s linear both;
     animation: flicker-in-1 2s linear both;
-    font-family: $font-family-primary
   
   
 
@@ -251,14 +254,13 @@ body{
       padding: 1rem;
       font-size: $font-size-md;
       font-weight: bolder;
-      background-color: $secondary-color;
-      font-family: $font-family-primary;
+      background-color: $secondary-color-btn;
+      box-shadow: 2px 2px 24px -3px $secondary-color;
       
       &:hover{
         opacity: 50%;
         background-color:$bg-color;
         color: $white-color;
-        border: none;
       }
 
 
@@ -313,11 +315,6 @@ body{
 .container{
     margin-top: 2rem;
 }
-
-
-
- 
-
 
 
 
