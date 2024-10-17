@@ -35,12 +35,13 @@ $font-size-xl: 4rem;
 
 
 %link{
-    text-decoration:underline;
     color: $white-color;
     font-weight: bolder;
     border-radius: 0.5rem;
    
   }
+
+
 
   %img{
     width: 15%;
@@ -125,6 +126,8 @@ body{
   height: 2rem;
   color: $secondary-color;
   opacity: 90%;
+  text-decoration:underline;
+
   
 }
 
@@ -145,7 +148,6 @@ body{
 
 .nav__list{
 
-    @extend%link;
     @include display(flex, false, row, space-around, center, 2rem);
 
 
