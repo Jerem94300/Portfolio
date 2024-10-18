@@ -16,7 +16,7 @@
   height: auto;
   opacity: 50%;
   border-radius: 100%;
-  box-shadow: 2px 2px 24px -3px #73f6a7;
+  box-shadow: 2px 2px 24px -3px #cf841a;
 }
 
 .footer, .paragraph__main, .title__main, .header {
@@ -93,7 +93,7 @@ body {
 
 .name__main {
   font-size: 4rem;
-  color: #73f6a7;
+  color: #cf841a;
 }
 
 .photo__accueil {
@@ -105,6 +105,7 @@ body {
 }
 
 .photo__item {
+  color: #cf841a;
   width: 70%;
   animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
@@ -148,6 +149,7 @@ body {
   background-color: #7fbe97;
   box-shadow: 2px 2px 24px -3px #73f6a7;
   font-family: "poppinsregular";
+  border: none;
 }
 .footer .btn__footer:hover {
   opacity: 50%;

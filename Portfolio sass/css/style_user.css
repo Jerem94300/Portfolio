@@ -16,7 +16,7 @@
   width: 30%;
   height: auto;
   border-radius: 2rem;
-  box-shadow: 2px 2px 24px -3px #73f6a7;
+  box-shadow: 2px 2px 24px -3px #cf841a;
 }
 
 .header {
@@ -116,6 +116,7 @@ body {
   font-weight: bolder;
   background-color: #7fbe97;
   box-shadow: 2px 2px 24px -3px #73f6a7;
+  border: none;
 }
 .footer .btn__footer:hover {
   opacity: 50%;

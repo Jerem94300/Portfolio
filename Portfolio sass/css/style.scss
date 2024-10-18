@@ -19,6 +19,7 @@ $text-primary-color: #000000;
 $background-nav: #ddd;
 $secondary-color: #73f6a7;
 $secondary-color-btn: #7fbe97;
+$color-item: #cf841a;
 
 
 $spacing-xs: 0.5rem;
@@ -54,6 +55,19 @@ $font-size-xl: 4rem;
 
   
   }
+
+  %pict{
+    width: 15%;
+    height: auto;
+    opacity: 50%;
+    border-radius: 100%;
+    box-shadow: 2px 2px 24px -3px $color-item;
+
+  
+  }
+
+
+
 
   %animation{
 
@@ -209,7 +223,7 @@ body{
 
 .name__main{
     font-size: $font-size-xl;
-    color: $secondary-color;
+    color: $color-item;
 }
 
 
@@ -225,7 +239,8 @@ body{
 
 
 .photo__item{
-    @extend%img;
+  color: $color-item;
+    @extend%pict;
     width: 70%;
    
     
@@ -282,6 +297,7 @@ body{
       background-color: $secondary-color-btn;
       box-shadow: 2px 2px 24px -3px $secondary-color;
       font-family: $font-family-primary;
+      border: none;
       
       &:hover{
         opacity: 50%;
