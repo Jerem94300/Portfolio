@@ -61,13 +61,13 @@ $font-size-xl: 4rem;
 
   %animation{
 
-    -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-    animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    -webkit-animation: puff-in-center 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: puff-in-center 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
   }
 
   %callAnimationpuff{
-    -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-    animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    -webkit-animation: puff-in-center 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: puff-in-center 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 
 
   }
@@ -241,8 +241,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-    -webkit-animation: slit-in-vertical 0.45s ease-out both;
-            animation: slit-in-vertical 0.45s ease-out both;
+    -webkit-animation: slit-in-vertical 1.5s ease-out both;
+            animation: slit-in-vertical 1.5s ease-out both;
   
 
 

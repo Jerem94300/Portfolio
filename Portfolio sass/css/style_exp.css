@@ -24,11 +24,11 @@
 }
 
 .header {
-  animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation: puff-in-center 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
 .footer, .picture__card {
-  animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation: puff-in-center 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
 body {
@@ -104,7 +104,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: slit-in-vertical 0.45s ease-out both;
+  animation: slit-in-vertical 1.5s ease-out both;
 }
 
 .logo__js, .logo__sql, .logo__git, .logo__seo, .logo__github, .logo__figma, .logo__symfony, .logo__php {
