@@ -19,7 +19,7 @@ $text-primary-color: #000000;
 $background-nav: #ddd;
 $secondary-color: #73f6a7;
 $secondary-color-btn: #7fbe97;
-
+$color-item: #cf841a;
 
 $spacing-xs: 0.5rem;
 $spacing-sm: 0.75rem;
@@ -49,6 +49,12 @@ $font-size-xl: 4rem;
     height: auto;
   
   }
+
+  %pict{
+    width: 40%;
+    height: auto;
+  }
+
 
   %animation{
 
@@ -196,21 +202,90 @@ body{
 
 .main{
     height: 800px;
-    // @include display(flex, false, row, space-around, center, 2rem);
+   
 
 }
 
+.card__army{
+  width: calc(100%/4);
+  @extend%animation;
+  perspective: 1000px;
+
+}
+
+.card__2002{
+  width: calc(100%/3);
+  border-radius: 2rem;
+  box-shadow: 2px 2px 24px -3px $color-item;
+  row-gap: 1rem;
+  transition: 2s ease;
+  opacity: 0%;
+
+    &:hover{
+      opacity: 100%;
+      transition: 2s;
+    }
+
+}
+.card__2018{
+  width: calc(100%/3);
+  border-radius: 2rem;
+  box-shadow: 2px 2px 24px -3px $color-item;
+  transition: 2s ease;
+
+  row-gap: 1rem;
+  opacity: 0%;
+
+  &:hover{
+    opacity: 100%;
+    transition: 2s ease;
+  }
+
+
+}
+.card__2020{
+  width: calc(100%/3);
+  border-radius: 2rem;
+  box-shadow: 2px 2px 24px -3px $color-item;
+  row-gap: 1rem;
+  transition: 2s ease;
+
+  opacity: 0%;
+
+  &:hover{
+    opacity: 100%;
+    transition: 2s ease;
+  }
+
+}
+
+
+
+
+
+
 .picture__dev{
-  width: 100%;
+  width: 10%;
+  height: 250px;
+  margin-top: 6rem;
+
 }
 
 .picture__card{
-    width: 10%;
-    border-radius: 2rem;
-    @extend%callAnimationpuff;
-    margin-bottom: 6rem;
+  width: 30%;
+  border-radius: 2rem;
+  @extend%callAnimationpuff;
+  @extend%pict;
+  margin-bottom: 6rem;
 
-    
+  
+}
+
+
+
+.pict__army{
+
+  border-radius: 1rem ;
 }
 
 .paragraph__perso{
@@ -224,47 +299,6 @@ body{
 
     
 }
-
-
-
-.logo__skill{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-    -webkit-animation: slit-in-vertical 0.45s ease-out both;
-            animation: slit-in-vertical 0.45s ease-out both;
-  
-
-
-
-
-}
-
-.skill__item{
-
-    @extend%img;
-    // box-shadow: 2px 2px 24px -3px $secondary-color;
-
-
-}
-
-.logo__js, .logo__sql, .logo__git, .logo__seo, .logo__github, .logo__figma, .logo__symfony, .logo__php{
-  border-radius: 0.5rem;
-}
-
-.logo__html, .logo__css{
-  border-radius: 0 0 1rem 1rem;
-}
-
-.logo__ubu, .logo__nginx{
-  border-radius: 100%;
-}
-
-.logo__nginx, .logo__php, .logo__symfony{
-  width: auto;
-  height: 52px;
-}
-
 
 
 
@@ -366,17 +400,7 @@ body{
   }
 
 
-  .picture__card{
-    width: 40%;
-    border-radius: 2rem;
-    @extend%callAnimationpuff;
-      display: flex;
-      flex-direction: column;
-    justify-content: center;
-    align-self: center;
- 
 
-  }
 
   .skill__dev{
 
@@ -716,3 +740,6 @@ body{
             transform: translateZ(0) rotateY(0);
   }
 }
+
+
+
