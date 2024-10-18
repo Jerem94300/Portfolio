@@ -83,6 +83,10 @@ body {
   gap: 2rem;
 }
 
+.picture__card {
+  margin-top: 6rem;
+}
+
 .paragraph__perso {
   font-size: 2rem;
   color: #fff;
@@ -139,15 +143,17 @@ body {
     margin-top: 2rem;
   }
   .main {
-    height: 200px;
     margin-bottom: 4rem;
+    height: auto;
   }
   .main .card__perso {
-    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+  .paragraph__perso {
+    margin-top: 2rem;
   }
   .container {
     margin-top: 2rem;

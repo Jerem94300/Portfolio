@@ -188,13 +188,6 @@ body {
   .main {
     margin-bottom: 4rem;
   }
-  .main .card__perso {
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
   .picture__dev {
     justify-content: center !important;
   }

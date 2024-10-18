@@ -77,12 +77,11 @@ body {
 }
 
 .card__army {
-  width: 25%;
+  max-height: 400px;
   perspective: 1000px;
 }
 
 .card__2002 {
-  width: 33.3333333333%;
   border-radius: 2rem;
   box-shadow: 2px 2px 24px -3px #cf841a;
   row-gap: 1rem;
@@ -95,7 +94,6 @@ body {
 }
 
 .card__2018 {
-  width: 33.3333333333%;
   border-radius: 2rem;
   box-shadow: 2px 2px 24px -3px #cf841a;
   transition: 2s ease;
@@ -108,7 +106,6 @@ body {
 }
 
 .card__2020 {
-  width: 33.3333333333%;
   border-radius: 2rem;
   box-shadow: 2px 2px 24px -3px #cf841a;
   row-gap: 1rem;
@@ -120,28 +117,17 @@ body {
   transition: 2s ease;
 }
 
-.picture__dev {
-  width: 10%;
-  height: 250px;
-  margin-top: 6rem;
-}
-
 .picture__card {
-  width: 30%;
   border-radius: 2rem;
   margin-bottom: 6rem;
 }
 
 .pict__army {
-  border-radius: 1rem;
-}
-
-.paragraph__perso {
-  font-size: 2rem;
-  color: #fff;
-  text-align: end;
-  justify-content: center;
-  animation: flicker-in-1 2s linear both;
+  width: 500px;
+  max-height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2rem 2rem 0 0;
 }
 
 .footer {
@@ -183,65 +169,49 @@ body {
 }
 
 @media screen and (max-width: 1100px) {
-  body {
-    margin: 0;
-  }
   .header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 2rem;
   }
   .header .nav {
     margin-top: 2rem;
   }
-  .main {
-    margin-bottom: 4rem;
+  .picture__dev {
+    margin-top: 4rem;
+    justify-content: center !important;
   }
-  .main .card__perso {
-    height: 200px;
+  .card__army {
+    min-height: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
-  .picture__dev {
-    justify-content: center !important;
-  }
-  .skill__dev {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .skill__dev .logo__skill {
-    width: 100%;
-  }
   .footer {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
   }
   .footer .footer__nav__list {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
   }
-  .footer__presentation {
+  .footer .footer__presentation {
     text-align: center;
   }
-  .btn__footer {
+  .footer .btn__footer {
     margin-top: 2rem;
   }
-  .btn__nav {
+  .footer .btn__nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 6rem;
-    gap: 2rem;
   }
 }
 @keyframes flicker-in-1 {
