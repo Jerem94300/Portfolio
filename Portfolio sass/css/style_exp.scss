@@ -370,14 +370,7 @@ body{
   .main{
     margin-bottom: 4rem;
 
-    .card__perso{
-        height: 200px;
-        @include display(flex, column, column, space-between, center, false);
-       
-    
-        
-    
-    }
+  
   }
 
 

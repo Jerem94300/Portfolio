@@ -214,6 +214,7 @@ body{
 }
 
 .picture__card{
+  margin-top: 6rem;
     @extend%pict;
     @extend%callAnimationpuff;
 
@@ -227,6 +228,9 @@ body{
     justify-content: center;
     -webkit-animation: flicker-in-1 2s linear both;
     animation: flicker-in-1 2s linear both;
+    
+
+    
 
 
     
@@ -309,17 +313,21 @@ body{
 }
 
 .main{
-    height: 200px;
     margin-bottom: 4rem;
+    height: auto;
 
     .card__perso{
-        height: 200px;
-        @include display(flex, column, column, space-between, center, false);
-       
-    
-        
+        @include display(flex, column, column, space-between, center, false)
     
     }
+
+   
+
+ 
+}
+
+.paragraph__perso{
+  margin-top: 2rem;
 }
 
 
