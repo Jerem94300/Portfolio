@@ -113,9 +113,9 @@ body {
   border-radius: 100%;
 }
 
-.logo__nginx, .logo__php, .logo__symfony, .logo__seo {
+.logo__nginx, .logo__php, .logo__symfony {
   width: auto;
-  height: 70px;
+  height: 52px;
 }
 
 .footer {
@@ -354,4 +354,4 @@ body {
   100% {
     transform: translateZ(0) rotateY(0);
   }
-}/*# sourceMappingURL=style_exp.css.map */
+}/*# sourceMappingURL=style_army.css.map */
