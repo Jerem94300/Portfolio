@@ -19,6 +19,8 @@ $text-primary-color: #000000;
 $background-nav: #ddd;
 $secondary-color: #73f6a7;
 $secondary-color-btn: #7fbe97;
+$color-item: #cf841a;
+
 
 
 $spacing-xs: 0.5rem;
@@ -47,6 +49,13 @@ $font-size-xl: 4rem;
   %img{
     width: 40%;
     height: auto;
+  
+  }
+  %pict{
+    width: 40%;
+    height: auto;
+    box-shadow: 2px 2px 24px -3px $color-item;
+
   
   }
 
@@ -208,6 +217,7 @@ body{
     width: 10%;
     border-radius: 2rem;
     @extend%callAnimationpuff;
+    @extend%pict;
     margin-bottom: 6rem;
 
     
@@ -301,6 +311,7 @@ body{
       font-weight: bolder;
       background-color: $secondary-color-btn;
       box-shadow: 2px 2px 24px -3px $secondary-color;
+      border: none;
       
       &:hover{
         opacity: 50%;
@@ -314,6 +325,16 @@ body{
       display: flex;
       justify-content: space-between;
       gap: 2rem;
+    }
+
+    .link__project{
+      border-radius: 2rem;
+      padding: 1rem;
+      font-size: $font-size-md;
+      font-weight: bolder;
+      background-color: $color-item;
+      box-shadow: 2px 2px 24px -3px $color-item;
+      border: none;
     }
     
 
