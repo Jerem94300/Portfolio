@@ -90,7 +90,7 @@ body {
 }
 .card__2002:hover {
   opacity: 100%;
-  transition: 2s;
+  transform: scale(1.4);
 }
 
 .card__2018 {
@@ -102,7 +102,7 @@ body {
 }
 .card__2018:hover {
   opacity: 100%;
-  transition: 2s ease;
+  transform: scale(1.4);
 }
 
 .card__2020 {
@@ -114,12 +114,12 @@ body {
 }
 .card__2020:hover {
   opacity: 100%;
-  transition: 2s ease;
+  transform: scale(1.4);
 }
 
 .picture__card {
   border-radius: 2rem;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
 }
 
 .pict__army {
@@ -167,6 +167,10 @@ body {
   justify-content: space-between;
   gap: 2rem;
 }
+.footer .btn__army {
+  border-radius: 2rem;
+  box-shadow: 2px 2px 24px -3px #cf841a;
+}
 
 @media screen and (max-width: 1100px) {
   .header {
@@ -181,24 +185,36 @@ body {
   }
   .picture__dev {
     margin-top: 4rem;
+    margin-bottom: 0;
     justify-content: center !important;
   }
   .card__army {
-    min-height: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 6rem;
+  }
+  .pict__army {
+    width: 100%;
+  }
+  .army__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .footer {
+    height: 50px;
+    margin-top: 15rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
   }
   .footer .footer__nav__list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
@@ -207,6 +223,7 @@ body {
   }
   .footer .btn__footer {
     margin-top: 2rem;
+    font-size: 1rem;
   }
   .footer .btn__nav {
     display: flex;
