@@ -1,11 +1,10 @@
 @import url(reset.css);
 @font-face {
-  font-family: 'poppinsregular';
-  src: url(../fonts/poppins-regular-webfont.woff2) format('woff2'),
-       url(../fonts/poppins-regular-webfont.woff) format('woff');
+  font-family: "poppinsregular";
+  src: url(../fonts/poppins-regular-webfont.woff2) format("woff2"),
+    url(../fonts/poppins-regular-webfont.woff) format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
 $max-content-width: 80%;
@@ -27,7 +26,7 @@ $spacing-md: 1rem;
 $spacing-lg: 1.5rem;
 $spacing-xl: 2rem;
 
-$font-family-primary:"poppinsregular";
+$font-family-primary: "poppinsregular";
 
 $font-size-xs: 0.25rem;
 $font-size-sm: 1rem;
@@ -35,58 +34,45 @@ $font-size-md: 2rem;
 $font-size-lg: 1.5rem;
 $font-size-xl: 4rem;
 
+%link {
+  text-decoration: underline;
+  color: $white-color;
+  font-weight: bolder;
+  border-radius: 0.5rem;
+}
 
-%link{
-    text-decoration:underline;
-    color: $white-color;
-    font-weight: bolder;
-    border-radius: 0.5rem;
-   
-  }
+%img {
+  width: 40%;
+  height: auto;
+}
 
-  %img{
-    width: 40%;
-    height: auto;
-  
-  }
+%pict {
+  width: 40%;
+  height: auto;
+}
 
-  %pict{
-    width: 40%;
-    height: auto;
-  }
+%animation {
+  -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+    both;
+  animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
 
+%callAnimationpuff {
+  -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+    both;
+  animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
 
-  %animation{
+%callAnimationFliker {
+  -webkit-animation: flicker-in-1 2s linear both;
+  animation: flicker-in-1 2s linear both;
+}
 
-    -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-    animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-  }
-
-  %callAnimationpuff{
-    -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-    animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-
-
-  }
-
-  %callAnimationFliker{
-    -webkit-animation: flicker-in-1 2s linear both;
-    animation: flicker-in-1 2s linear both;
-
-  }
-
-
-  %nav__btn{
-
+%nav__btn {
   border-radius: 100%;
   background-color: $secondary-color;
-  color:$bg-color;
-
-  }
-
-
-
-
+  color: $bg-color;
+}
 
 @mixin display(
   $display,
@@ -111,138 +97,94 @@ $font-size-xl: 4rem;
   }
 }
 
-
-
-
-
-body{
-    background-color: $bg-color;
-    margin: 50px 250px;
-    font-family: $font-family-primary;
-    
+body {
+  background-color: $bg-color;
+  margin: 50px 250px;
+  font-family: $font-family-primary;
 }
 
-
-
-.header{
-    font-size: $font-size-md;
-    color: $white-color;
-    @include display(flex, false, row, space-between, center, false);
-    @extend%animation;
-
-  
-
-
+.header {
+  font-size: $font-size-md;
+  color: $white-color;
+  @include display(flex, false, row, space-between, center, false);
+  @extend%animation;
 }
 
-.btn__actif{
+.btn__actif {
   border-radius: 0.5rem;
   height: 2rem;
   color: $secondary-color;
   opacity: 90%;
-
-  
 }
 
-
-
-
-.title__h1{
-    -webkit-animation: flicker-in-1 2s linear both;
-    animation: flicker-in-1 2s linear both;
-  
-  
-
-
+.title__h1 {
+  -webkit-animation: flicker-in-1 2s linear both;
+  animation: flicker-in-1 2s linear both;
 }
 
-
-
-.nav__list{
-
-    @include display(flex, false, row, space-around, center, 2rem);
-
-
+.nav__list {
+  @include display(flex, false, row, space-around, center, 2rem);
 }
 
-.nav__link{
-    @extend%link;
-    
+.nav__link {
+  @extend%link;
 
+  :hover {
+    color: $secondary-color;
+  }
 
-
-
-
-    :hover{
-        color: $secondary-color;
-        
+  &:hover {
+    .icon__fb {
+      color: rgb(64, 64, 216);
     }
 
-    
-    &:hover{
-        .icon__fb{
-            color: rgb(64, 64, 216)
-        }
-
-        .icon__insta{
-            color: rgb(197, 48, 118)
-        }
-
-        .icon__linkedin{
-            color: rgb(64, 64, 216)
-
-        }
-        
-
+    .icon__insta {
+      color: rgb(197, 48, 118);
     }
 
+    .icon__linkedin {
+      color: rgb(64, 64, 216);
+    }
+  }
 }
 
 // main
 
-.main{
-    height: 800px;
-   
-
+.main {
+  height: 800px;
 }
 
-.card__army{
+.card__army {
   max-height: 400px;
   @extend%animation;
   perspective: 1000px;
-
 }
 
-.card__2002{
+.card__2002 {
   border-radius: 2rem;
   box-shadow: 2px 2px 24px -3px $color-item;
   row-gap: 1rem;
   transition: 2s ease;
   opacity: 0%;
 
-    &:hover{
-      opacity: 100%;
-      transition: 2s;
-    }
-
+  &:hover {
+    opacity: 100%;
+    transform: scale(1.4);
+  }
 }
-.card__2018{
-  border-radius: 2rem ;
+.card__2018 {
+  border-radius: 2rem;
   box-shadow: 2px 2px 24px -3px $color-item;
   transition: 2s ease;
-
   row-gap: 1rem;
   opacity: 0%;
 
-  &:hover{
+  &:hover {
     opacity: 100%;
-    transition: 2s ease;
+    transform: scale(1.4);
   }
-
- 
-
 }
-.card__2020{
+.card__2020 {
   border-radius: 2rem;
   box-shadow: 2px 2px 24px -3px $color-item;
   row-gap: 1rem;
@@ -250,474 +192,400 @@ body{
 
   opacity: 0%;
 
-  &:hover{
+  &:hover {
     opacity: 100%;
-    transition: 2s ease;
+    transform: scale(1.4);
   }
-
 }
 
-
-
-
-
-
-.picture__card{
+.picture__card {
   border-radius: 2rem;
   @extend%callAnimationpuff;
   @extend%pict;
-  margin-bottom: 6rem;
-
-  
+  margin-bottom: 2rem;
 }
 
-
-
-.pict__army{
+.pict__army {
   width: 500px;
   max-height: 250px;
   object-fit: cover;
   border-radius: 2rem 2rem 0 0;
 }
 
+.footer {
+  @include display(flex, false, row, space-between, center, 2rem);
+  font-size: $font-size-md;
+  color: $white-color;
+  display: flex;
+  width: 100%;
+  @extend%callAnimationpuff;
 
-
-
-
-
-
-
-
-
-
-
-
-.footer{
+  .footer__nav__list {
     @include display(flex, false, row, space-between, center, 2rem);
+  }
+
+  .btn__footer {
+    border-radius: 2rem;
+    padding: 1rem;
     font-size: $font-size-md;
-    color: $white-color;
+    font-weight: bolder;
+    background-color: $secondary-color-btn;
+    box-shadow: 2px 2px 24px -3px $secondary-color;
+    border: none;
+
+    &:hover {
+      opacity: 50%;
+      background-color: $bg-color;
+      color: $white-color;
+    }
+  }
+  .btn__nav {
     display: flex;
-    width: 100%;
-    @extend%callAnimationpuff;
+    justify-content: space-between;
+    gap: 2rem;
+  }
 
-  
-
-    .footer__nav__list{
-        @include display(flex, false, row, space-between, center, 2rem);
-
-        
-    }
-
-    .btn__footer{
-      border-radius: 2rem;
-      padding: 1rem;
-      font-size: $font-size-md;
-      font-weight: bolder;
-      background-color: $secondary-color-btn;
-      box-shadow: 2px 2px 24px -3px $secondary-color;
-      border: none;
-      
-      &:hover{
-        opacity: 50%;
-        background-color:$bg-color;
-        color: $white-color;
-      }
+  .btn__army{
+    border-radius: 2rem;
+    box-shadow: 2px 2px 24px -3px $color-item;
 
 
-    }
-    .btn__nav{
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-    
-
-
+  }
 }
-
-
-
-
 
 // RWD
 
-@media screen and (max-width: 1100px){
-
-  
-
-
-  .header{
+@media screen and (max-width: 1100px) {
+  .header {
     @include display(flex, false, column, space-evenly, center, false);
-    @extend%animation;
     margin-top: 2rem;
 
-
-    .nav{
-        margin-top: 2rem;
+    .nav {
+      margin-top: 2rem;
     }
+  }
 
+  .picture__dev {
+    margin-top: 4rem;
+    margin-bottom: 0;
+    justify-content: center !important;
+  }
 
+  .card__army {
+
+    @include display(flex, column, column, space-between, center, false);
+    margin-bottom: 6rem;
+  }
+
+  .pict__army{
+
+    width: 100%;
   }
 
 
+  .army__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
 
-
- 
-
-
-    .picture__dev{
-      margin-top: 4rem;
-    justify-content: center !important;
-    }
-
-    .card__army{
-      min-height: calc(100%/4);
-
-      @include display(flex, column, column, space-between, center, false);
-     
-    
-
-
-
-    }
-
-  
-
-
-
-
- 
-
-
-
-
-
-
-  .footer{
-    @include display(flex, false, column, space-between, center, false);
-
-    
-  
-
-
-
-      .footer__nav__list{
-        @include display(flex, false, column, space-between, center, false);
-
-
-      }
       
+  }
 
- 
+  .footer {
+    height: 50px;
+    margin-top: 15rem;
+    @include display(flex, false, column, end, center, false);
 
-    .footer__presentation{
-        text-align: center;
+    .footer__nav__list {
+      @include display(flex, false, row, space-between, center, false);
     }
 
-
-    .btn__footer{
-        margin-top: 2rem;
+    .footer__presentation {
+      text-align: center;
     }
 
-    .btn__nav{
+   
+
+    .btn__footer {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    .btn__nav {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-    
-
-
     }
   }
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
 
 // ANIMATION Flicker
 
-
- @-webkit-keyframes flicker-in-1 {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 0;
-    }
-    10.1% {
-      opacity: 1;
-    }
-    10.2% {
-      opacity: 0;
-    }
-    20% {
-      opacity: 0;
-    }
-    20.1% {
-      opacity: 1;
-    }
-    20.6% {
-      opacity: 0;
-    }
-    30% {
-      opacity: 0;
-    }
-    30.1% {
-      opacity: 1;
-    }
-    30.5% {
-      opacity: 1;
-    }
-    30.6% {
-      opacity: 0;
-    }
-    45% {
-      opacity: 0;
-    }
-    45.1% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 1;
-    }
-    55% {
-      opacity: 1;
-    }
-    55.1% {
-      opacity: 0;
-    }
-    57% {
-      opacity: 0;
-    }
-    57.1% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 1;
-    }
-    60.1% {
-      opacity: 0;
-    }
-    65% {
-      opacity: 0;
-    }
-    65.1% {
-      opacity: 1;
-    }
-    75% {
-      opacity: 1;
-    }
-    75.1% {
-      opacity: 0;
-    }
-    77% {
-      opacity: 0;
-    }
-    77.1% {
-      opacity: 1;
-    }
-    85% {
-      opacity: 1;
-    }
-    85.1% {
-      opacity: 0;
-    }
-    86% {
-      opacity: 0;
-    }
-    86.1% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
+@-webkit-keyframes flicker-in-1 {
+  0% {
+    opacity: 0;
   }
-  @keyframes flicker-in-1 {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      opacity: 0;
-    }
-    10.1% {
-      opacity: 1;
-    }
-    10.2% {
-      opacity: 0;
-    }
-    20% {
-      opacity: 0;
-    }
-    20.1% {
-      opacity: 1;
-    }
-    20.6% {
-      opacity: 0;
-    }
-    30% {
-      opacity: 0;
-    }
-    30.1% {
-      opacity: 1;
-    }
-    30.5% {
-      opacity: 1;
-    }
-    30.6% {
-      opacity: 0;
-    }
-    45% {
-      opacity: 0;
-    }
-    45.1% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 1;
-    }
-    55% {
-      opacity: 1;
-    }
-    55.1% {
-      opacity: 0;
-    }
-    57% {
-      opacity: 0;
-    }
-    57.1% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 1;
-    }
-    60.1% {
-      opacity: 0;
-    }
-    65% {
-      opacity: 0;
-    }
-    65.1% {
-      opacity: 1;
-    }
-    75% {
-      opacity: 1;
-    }
-    75.1% {
-      opacity: 0;
-    }
-    77% {
-      opacity: 0;
-    }
-    77.1% {
-      opacity: 1;
-    }
-    85% {
-      opacity: 1;
-    }
-    85.1% {
-      opacity: 0;
-    }
-    86% {
-      opacity: 0;
-    }
-    86.1% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
+  10% {
+    opacity: 0;
   }
-  
-
-
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flicker-in-1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /*
  * ----------------------------------------
  * animation puff-in-center
  * ----------------------------------------
  */
- @-webkit-keyframes puff-in-center {
-    0% {
-      -webkit-transform: scale(2);
-              transform: scale(2);
-      -webkit-filter: blur(4px);
-              filter: blur(4px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
   }
-  @keyframes puff-in-center {
-    0% {
-      -webkit-transform: scale(2);
-              transform: scale(2);
-      -webkit-filter: blur(4px);
-              filter: blur(4px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
   }
-  
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
 
 /**
  * ----------------------------------------
  * animation slit-in-vertical logo
  * ----------------------------------------
  */
- @-webkit-keyframes slit-in-vertical {
+@-webkit-keyframes slit-in-vertical {
   0% {
     -webkit-transform: translateZ(-800px) rotateY(90deg);
-            transform: translateZ(-800px) rotateY(90deg);
+    transform: translateZ(-800px) rotateY(90deg);
     opacity: 0;
   }
   54% {
     -webkit-transform: translateZ(-160px) rotateY(87deg);
-            transform: translateZ(-160px) rotateY(87deg);
+    transform: translateZ(-160px) rotateY(87deg);
     opacity: 1;
   }
   100% {
     -webkit-transform: translateZ(0) rotateY(0);
-            transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
   }
 }
 @keyframes slit-in-vertical {
   0% {
     -webkit-transform: translateZ(-800px) rotateY(90deg);
-            transform: translateZ(-800px) rotateY(90deg);
+    transform: translateZ(-800px) rotateY(90deg);
     opacity: 0;
   }
   54% {
     -webkit-transform: translateZ(-160px) rotateY(87deg);
-            transform: translateZ(-160px) rotateY(87deg);
+    transform: translateZ(-160px) rotateY(87deg);
     opacity: 1;
   }
   100% {
     -webkit-transform: translateZ(0) rotateY(0);
-            transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
   }
 }
-
-
-
