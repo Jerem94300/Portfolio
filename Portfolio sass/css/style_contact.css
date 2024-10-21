@@ -246,26 +246,40 @@ body {
   .header .nav {
     margin-top: 2rem;
   }
-  .main {
-    margin-bottom: 4rem;
-  }
-  .picture__dev {
-    justify-content: center !important;
-  }
-  .picture__card {
-    width: 40%;
-    border-radius: 2rem;
+  .card__perso {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: center;
+    align-items: center;
+    box-shadow: none;
+    gap: 2rem;
   }
-  .skill__dev {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
+  .card__perso .picture__dev {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
   }
-  .skill__dev .logo__skill {
-    width: 100%;
+  .card__perso .picture__card {
+    width: 60%;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card__perso .btn__sendEmail {
+    gap: 2rem;
+  }
+  .card__perso .btn__sendEmail .phone__number {
+    width: 200px;
+    font-size: 24px;
+  }
+  .card__perso .btn__sendEmail .btn-primary {
+    width: 200px;
+    font-size: 24px;
+  }
+  .card__perso .btn__sendEmail .btn__footer__dwl {
+    width: 200px;
+    font-size: 24px;
   }
   .footer {
     display: flex;
