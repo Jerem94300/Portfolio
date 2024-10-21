@@ -24,20 +24,26 @@
     <title>Portfolio Sass</title>
   </head>
   <body>
-
     <header class="header">
-      <h1 class="title__h1 ">About me...</h1>
+      <h1 class="title__h1">About me...</h1>
 
       <nav class="nav mb-4">
-        <ul class="nav__list ">
+        <ul class="nav__list">
           <li class="list__item d-flex">
-            <a href="/Portfolio sass/index.html" class="nav__link text-decoration-none">
-              <i class="bi bi-house-door d-flex align-items-center justify-content-center "></i>
+            <a
+              href="/Portfolio sass/index.html"
+              class="nav__link text-decoration-none"
+            >
+              <i
+                class="bi bi-house-door d-flex align-items-center justify-content-center"
+              ></i>
             </a>
           </li>
           <li class="list__item">
             <a href="/Portfolio sass/user.html" class="nav__link btn__actif">
-              <i class="bi bi-person link-underline-info d-flex align-items-center "></i>
+              <i
+                class="bi bi-person link-underline-info d-flex align-items-center"
+              ></i>
             </a>
           </li>
           <li class="list__item">
@@ -55,36 +61,106 @@
     </header>
 
     <main class="main">
-      <container class="container d-flex align-items-center justify-content-center">
-        <div class="user__content">
-            <div class="card__perso d-flex flex justify-content-evenly align-items-center">
-                <img src="/Portfolio sass/images/user1.jpg" alt="" class="picture__card mb-4">
-                <p class="paragraph__perso mb-4">Date of birth: 05/12/1982</p>
-               
+      <container class="container">
+        <div class="user__content d-flex">
+          <div
+            class="card__perso d-flex flex-column justify-content-between align-items-center"
+          >
+            <div class="image__content d-flex justify-content-center align-items-center">
+              <img
+                src="/Portfolio sass/images/user1.jpg"
+                alt=""
+                class="picture__card mb-4"
+              />
             </div>
-            <div class="skill__dev"></div>
-            <div class="other__skill"></div>
-            <div class="card__hobbies"></div>
 
+            <div
+              class="paragraph__content text-center"
+            >
+              <p class="paragraph__perso mb-4">Date of birth: 05/12/1982</p>
+            </div>
+          </div>
 
+          <div
+            class="skill__dev d-flex flex-column justify-content-between align-items-center gap-4"
+          >
+            <div class="image__content d-flex justify-content-center align-items-center">
+              <img
+                src="/Portfolio sass/images/user_pict2.webp"
+                alt=""
+                class="picture__card mb-4"
+              />
+            </div>
+
+            <div
+              class="paragraph__content text-center"
+            >
+              <p class="paragraph__perso">Drivng licence Cat.B</p>
+              <p class="paragraph__perso">Drivng licence Cat.C</p>
+              <p class="paragraph__perso">English B2</p>
+              <p class="paragraph__perso" >Spanish B1</p>
+            </div>
+          </div>
+
+          <div
+            class="card__informatic d-flex flex-column justify-content-between align-items-center"
+          >
+            <div class="image__content d-flex justify-content-center align-items-center">
+              <img
+                src="/Portfolio sass/images/pict__informatic.webp"
+                alt=""
+                class="picture__card mb-4"
+              />
+            </div>
+
+            <div
+              class="paragraph__content text-center"
+            >
+              <p class="paragraph__perso">Word</p>
+              <p class="paragraph__perso">Excel</p>
+              <p class="paragraph__perso">Power point</p>
+            </div>
+          </div>
+
+          <div
+            class="card__hobbies d-flex flex-column justify-content-between align-items-center"
+          >
+            <div class="image__content d-flex justify-content-center align-items-center">
+              <img
+                src="/Portfolio sass/images/hobbies_pict.jpg"
+                alt=""
+                class="picture__card mb-4"
+              />
+            </div>
+
+            <div
+              class="paragraph__content text-center"
+            >
+              <p class="paragraph__perso">Hiking</p>
+              <p class="paragraph__perso">Swimming</p>
+              <p class="paragraph__perso">Jogging / trail</p>
+              <p class="paragraph__perso">Video-Games</p>
+            </div>
+          </div>
         </div>
-       
       </container>
     </main>
 
     <footer class="footer d-flex justify-content-between">
       <div class="btn__download">
-        <input type="button" value="Download C.V" onclick="" class="btn__footer"></input>
-
+        <input
+          type="button"
+          value="Download C.V"
+          onclick=""
+          class="btn__footer"
+        />
       </div>
 
       <div class="btn__return">
         <a href="/Portfolio sass/index.html">
-            <input type="button" value="Return" onclick="" class="btn__footer"></input>
+          <input type="button" value="Return" onclick="" class="btn__footer" />
         </a>
-
       </div>
-  
 
       <div class="footer__nav p-4">
         <ul class="footer__nav__list">

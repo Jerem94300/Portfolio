@@ -246,8 +246,8 @@ body {
   }
 
   .btn__army{
-    border-radius: 2rem;
     box-shadow: 2px 2px 24px -3px $color-item;
+    border-radius: 2rem;
 
 
   }
@@ -288,14 +288,11 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-
-      
   }
 
   .footer {
     height: 50px;
-    margin-top: 15rem;
+    margin-top: 30rem;
     @include display(flex, false, column, end, center, false);
 
     .footer__nav__list {
@@ -309,8 +306,7 @@ body {
    
 
     .btn__footer {
-      margin-top: 2rem;
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
 
     .btn__nav {
@@ -318,7 +314,13 @@ body {
       justify-content: space-evenly;
       align-items: center;
     }
+
+    .btn__army{
+      border-radius: 2rem;
+
+  
   }
+}
 }
 
 // ANIMATION Flicker

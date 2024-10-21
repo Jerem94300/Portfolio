@@ -313,7 +313,7 @@ body{
 
 }
 
-
+// RWD
 
 
 
@@ -362,13 +362,18 @@ body{
         @include display(flex, false, row, space-evenly, center, 2rem);
 
     }
+
+
+    .btn__footer {
+      font-size: 1.5rem;
+    }
     
 
 }
 
-.footer__presentation{
-    text-align: center;
-}
+
+
+
 
 
 
