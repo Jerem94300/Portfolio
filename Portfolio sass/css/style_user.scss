@@ -55,7 +55,7 @@ $font-size-xl: 4rem;
   }
 
   %pict{
-    width: 30%;
+    width: 50%;
     height: auto;
     border-radius: 2rem;
     box-shadow: 2px 2px 24px -3px $color-item;
@@ -209,7 +209,6 @@ body{
 
 .main{
     height: 800px;
-    @include display(flex, false, row, space-around, center, 2rem);
 
 }
 
@@ -224,17 +223,64 @@ body{
 .paragraph__perso{
     font-size: $font-size-md;
     color: $white-color;
-    text-align: end;
-    justify-content: center;
     -webkit-animation: flicker-in-1 2s linear both;
     animation: flicker-in-1 2s linear both;
     
-
-    
-
-
     
 }
+
+.card__perso {
+  border-radius: 2rem;
+  row-gap: 1rem;
+  transition: 2s ease;
+  opacity: 0%;
+
+  &:hover {
+    opacity: 100%;
+    transform: scale(1.4);
+    z-index: 1;
+  }
+}
+
+.skill__dev {
+  border-radius: 2rem;
+  row-gap: 1rem;
+  transition: 2s ease;
+  opacity: 0%;
+
+  &:hover {
+    opacity: 100%;
+    transform: scale(1.4);
+    z-index: 1;
+  }
+}
+
+.card__informatic {
+  border-radius: 2rem;
+  row-gap: 1rem;
+  transition: 2s ease;
+  opacity: 0%;
+
+  &:hover {
+    opacity: 100%;
+    transform: scale(1.4);
+    z-index: 1;
+  }
+}
+
+.card__hobbies {
+  border-radius: 2rem;
+  row-gap: 1rem;
+  transition: 2s ease;
+  opacity: 0%;
+
+  &:hover {
+    opacity: 100%;
+    transform: scale(1.4);
+    z-index: 1;
+  }
+}
+
 
 
 
@@ -352,13 +398,16 @@ body{
         @include display(flex, false, row, space-evenly, center, 2rem);
 
     }
+
+
+    .btn__footer {
+      font-size: 1.5rem;
+    }
+    
     
 
 }
 
-.footer__presentation{
-    text-align: center;
-}
 
 
 .btn__footer{
