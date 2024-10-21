@@ -459,42 +459,55 @@ body{
 
   }
 
-  .main{
-    margin-bottom: 4rem;
 
-  
-  }
 
+
+.card__perso{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  box-shadow: none;
+  gap: 2rem;   
 
   .picture__dev{
-  justify-content: center !important;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
   }
 
-
   .picture__card{
-    width: 40%;
+    width: 60%;
     border-radius: 2rem;
-    @extend%callAnimationpuff;
-      display: flex;
-      flex-direction: column;
+    display: flex;
     justify-content: center;
-    align-self: center;
+    align-items: center;
+
+ 
  
 
   }
-
-  .skill__dev{
-
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-
-    .logo__skill{
-
-      width: 100%;
+  .btn__sendEmail{
+    
+    gap: 2rem;
+    .phone__number{
+      width: 200px;
+      font-size: 24px;
     }
-  
+    .btn-primary{
+      width: 200px;
+      font-size: 24px;
+    }
+    .btn__footer__dwl{
+      width: 200px;
+      font-size: 24px;
+
+    }
+
+
 
   }
+}
 
 
 
